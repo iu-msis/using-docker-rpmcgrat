@@ -49,6 +49,7 @@ button:hover, a:hover {
   margin: 5px;
   background-color: #16174f;
   color: white;
+}
 
 #bookbutton.hover {
   background-color: white;
