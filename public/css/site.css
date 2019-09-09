@@ -65,7 +65,7 @@ button:hover, a:hover {
     height: 150px;
 }
 
-//* tablsort*//
+/* tablesort */
 th[role=columnheader]:not(.no-sort) {
 	cursor: pointer;
 }
