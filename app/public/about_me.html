@@ -31,17 +31,28 @@
 
   <main>
 
-    <div class="card">
-      <a href="img/not_me_but_brittany_snow.jpg">
-      <img class="img fluid img-thumbnail" src="img/not_me_but_brittany_snow.jpg" id="ProfilePic"></a>
-      <h1>Heather O'Reilly</h1>
-      <p class="title">Dublin, Ireland</p>
-      <p>Birthdate: 4/01/1987</p>
-      <p>Age: 32</p>
+    <div class="card" id ="patientWaitingApp">
+      <a v-bind:href="person.picture.large">
+      <img class="img fluid img-thumbnail" v-bind:src="person.picture.medium" id="ProfilePic"></a>
 
-      <p><a href="mailto:someone@yoursite.com" target="_blank" rel="noopener noreferrer"><button>Email Me</button></a></p>
+      <div class="container">
+          <div class="row">
+            <div id="patientWaitingApp">
+              <div class="patientWaiting patient">
+                <span class="patientName"><strong>Name:</strong> {{person.name.first}} {{person.name.last}}</span><br>
+                <span class="patientName"><strong>Hometown:</strong> {{person.location.city}}, {{person.location.state}}</span><br>
+                <span class="patientName"><strong>Birthdate:</strong> {{person.dob.date}}</span><br>
+                <span class="patientName"><strong>Age:</strong> {{person.dob.age}}</span><br>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      <p><a v-bind:href="'mailto:'+person.email" target="_blank" rel="noopener noreferrer"><button>Email Me</button></a></p>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="js/randomprofile.js"></script>
 
 </body>
 </html>
