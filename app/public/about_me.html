@@ -32,22 +32,23 @@
   <main>
     <div id = "patientWaitingApp">
     <form @submit.prevent='fetchPatients()'>
+
       <div class="card" id ="patientWaitingApp">
         <a v-bind:href="person.picture.large">
         <img class="img fluid img-thumbnail" v-bind:src="person.picture.medium" id="ProfilePic"></a>
 
         <div class="container">
-            <div class="row">
-              <div id="patientWaitingApp">
-                <div class="patientWaiting patient">
-                  <span class="patientName" align-content="center"><strong>Name:</strong> {{person.name.first}} {{person.name.last}}</span><br>
-                  <span class="patientName" align-content="center"><strong>Country of Origin:</strong> {{person.nat}}</span><br>
-                  <span class="patientName" align-content="center"><strong>Birthdate:</strong> {{person.dob.date}}</span><br>
-                  <span class="patientName" align-content="center"><strong>Age:</strong> {{person.dob.age}}</span><br>
-                </div>
+          <div class="row">
+            <div id="patientWaitingApp">
+              <div class="patientWaiting patient">
+                <span class="patientName"><strong>Name:</strong> {{person.name.first}} {{person.name.last}}</span><br>
+                <span class="patientName"><strong>Country of Origin:</strong> {{person.nat}}</span><br>
+                <span class="patientName"><strong>Birthdate:</strong> {{person.dob.date}}</span><br>
+                <span class="patientName"><strong>Age:</strong> {{person.dob.age}}</span><br>
               </div>
             </div>
           </div>
+        </div>
 
         <a v-bind:href="'mailto:'+person.email" target="_blank" rel="noopener noreferrer"><button>Email Me</button></a>
         </div>
